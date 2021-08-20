@@ -18,11 +18,11 @@ public class LessonFiveTest extends TestBase {
     String userGender = "Other";
 
     Faker faker = new Faker(new Locale("ru"));
+    Faker fakerSecond = new Faker (new Locale("en"));
     public String userFirstName = faker.name().firstName(), // задаем имя
             userLastName = faker.name().lastName(), // задаем фамилию
             userNumber = faker.phoneNumber().subscriberNumber(10), // задаем телефонный номер
             userCurrentAddress = faker.address().fullAddress(); // задаем адрес
-    Faker fakerSecond = new Faker (new Locale("en"));
     public String userEmail = fakerSecond.internet().emailAddress(); // еще один faker на английском, для почты
 
     @Test
