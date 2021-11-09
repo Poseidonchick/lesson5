@@ -96,15 +96,15 @@ public class FormPages {
                                 String userState, String userCity,
                                 String yearOfBirth, String monthOfBirth,
                                 String dayOfBirth) {
-        labelBody.filter(text("Student name")).shouldHave(texts(userFirstName + " " + userLastName));
-        labelBody.filter(text("Student Email")).shouldHave(texts(userEmail));
-        labelBody.filter(text("Gender")).shouldHave(texts(userGender));
-        labelBody.filter(text("Mobile")).shouldHave(texts(userNumber));
-        labelBody.filter(text("Date of Birth")).shouldHave(texts(dayOfBirth + " " + monthOfBirth + "," + yearOfBirth));
-        labelBody.filter(text("Subjects")).shouldHave(texts(userSubject));
-        labelBody.filter(text("Hobbies")).shouldHave(texts("Sports, Reading, Music"));
-        labelBody.filter(text("Picture")).shouldHave(texts("harold.jpg"));
-        labelBody.filter(text("Address")).shouldHave(texts(userCurrentAddress));
-        labelBody.filter(text("State and City")).shouldHave(texts(userState + " " + userCity));
+        labelBody.filter(text("Student name")).shouldHave(texts(userFirstName + " " + userLastName))
+                .filter(text("Student Email")).shouldHave(texts(userEmail))
+                .filter(text("Gender")).shouldHave(texts(userGender))
+                .filter(text("Mobile")).shouldHave(texts(userNumber))
+                .filter(text("Date of Birth")).shouldHave(texts(dayOfBirth + " " + monthOfBirth + "," + yearOfBirth))
+                .filter(text("Subjects")).shouldHave(texts(userSubject))
+                .filter(text("Hobbies")).shouldHave(texts("Sports, Reading, Music"))
+                .filter(text("Picture")).shouldHave(texts("harold.jpg"))
+                .filter(text("Address")).shouldHave(texts(userCurrentAddress))
+                .filter(text("State and City")).shouldHave(texts(userState + " " + userCity));
     }
 }
